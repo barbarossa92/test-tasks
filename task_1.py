@@ -14,7 +14,9 @@ def check_word():
     category = " ".join(category_list)
     resp_country = requests.get(url.format(word=country))
     country = json.loads(resp_country.content.decode("utf-8"))['gent']
-    print("База производителей {} из {}.".format(category, country))
+    result = "База производителей {} из {}.".format(category, country.capitalize())
+    print(result)
+    return result
 
 
 if __name__ == "__main__":

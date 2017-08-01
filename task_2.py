@@ -15,7 +15,9 @@ def dice():
     sort_list = [sorted(["".join(sorted(r)) for r in i]) for i in data]
     new_list = list()
     [new_list.append(y) for y in sort_list if y not in new_list]
-    return print("Результат: ", len(new_list))
+    result = "Результат: ", len(new_list)
+    print(result)
+    return result
 
 
 if __name__ == "__main__":
